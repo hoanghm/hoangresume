@@ -13,8 +13,26 @@ var skillPos = $("#skill-left-top").offset().top,
 
 
 $(window).ready(function () {
+
+    document.querySelector(".mobile-nav").style.width = $(window).width();
+
+    let lastPos = 0;
    $(window).scroll(function () {
+       document.querySelector(".mobile-nav").style.width = $(window).width();
+
        var curPos = $(this).scrollTop();
+
+       if (curPos > lastPos) {
+           document.querySelector(".mobile-nav").style.marginTop = "-50px";
+       }
+
+       else if (curPos < lastPos) {
+           document.querySelector(".mobile-nav").style.marginTop = "0";
+       }
+
+       lastPos = curPos;
+
+
        if (curPos > skillPos + 0.8*windowHeight) {
             skillElements.map(function (cur) {
                 cur.style.display = "inline-block";
