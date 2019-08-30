@@ -38,12 +38,16 @@ $(window).ready(function () {
                 cur.style.display = "inline-block";
                 cur.classList.add("animated");
             });
-            document.getElementById("skill-left-top").classList.add("fadeInLeft");
-            document.getElementById("skill-left-bot").classList.add("fadeInLeft");
-            document.getElementById("skill-cen-top").classList.add("fadeInDown");
-            document.getElementById("skill-cen-bot").classList.add("fadeInUp");
-            document.getElementById("skill-right-top").classList.add("fadeInRight");
-            document.getElementById("skill-right-bot").classList.add("fadeInRight");
+
+            skillElements.map(function (cur) {
+                cur.classList.add("fadeInLeft")
+            });
+            // document.getElementById("skill-left-top").classList.add("fadeInLeft");
+            // document.getElementById("skill-left-bot").classList.add("fadeInLeft");
+            // document.getElementById("skill-cen-top").classList.add("fadeInDown");
+            // document.getElementById("skill-cen-bot").classList.add("fadeInUp");
+            // document.getElementById("skill-right-top").classList.add("fadeInRight");
+            // document.getElementById("skill-right-bot").classList.add("fadeInRight");
        }
 
        if (curPos > projectPos + 1.6*windowHeight) {

@@ -426,6 +426,12 @@ footer {
     display: none;
     color: black;
     text-align: center;
+    z-index: 1;
+    background-color: #c4d8ed;
+    top: 0;
+    transition: margin 0.5s;
+    opacity: 0.98;
+    position: fixed;
 }
 
 .mobile-nav a {
@@ -489,13 +495,9 @@ footer {
     }
 
     .mobile-nav  {
-        opacity: 0.98;
-        position: fixed;
+
         display: block;
-        z-index: 1;
-        background-color: #c4d8ed;
-        top: 0;
-        transition: margin 0.5s;
+
     }
 
     .mobile-nav .mobile-logo {
