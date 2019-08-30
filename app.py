@@ -6,7 +6,7 @@ from flask_mail import Mail, Message
 import os
 
 
-# app's config
+# config
 class Config:
     SECRET_KEY = 'S0m3thing v3ry difficult'
     MAIL_SERVER = 'smtp.gmail.com'
