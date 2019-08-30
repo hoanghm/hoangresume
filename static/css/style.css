@@ -156,6 +156,10 @@ hr {
     text-decoration: underline;
 }
 
+#about-me-section hr {
+    width: 29%;
+}
+
 .section-title {
     margin-bottom: 50px;
 }
@@ -288,7 +292,7 @@ hr {
 .experience {
     margin: 0 auto;
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin-bottom: 80px;
 }
 
@@ -459,7 +463,7 @@ footer {
         width: 95%;
     }
 
-    .projects, .sub-section, .experience {
+    .projects, .sub-section, .block {
         width: 95%;
     }
 
@@ -513,8 +517,22 @@ footer {
         width: 80%;
     }
 
+    .main-description {
+        left: 5%;
+    }
 
+    hr, #about-me-section hr {
+        width: 20%;
+    }
 
+    .sub-section hr {
+        width: 25%;
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 

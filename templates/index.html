@@ -25,53 +25,21 @@
 <body>
 
         <div class="mobile-nav">
-                    <a href="#" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
+                    <a href="{{ url_for("index") }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
                     <span id="mobile-toggle"><span class="fas fa-bars"></span></span>
 
             <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
         </div>
 
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
+        <ul class="list-unstyled components" id="mobile-nav-bar">
+            
+            <li> <a href="#skills"> skills </a> </li>
+            <li> <a href="#projects"> projects </a> </li>
+            <li> <a href="#experience-section"> experience </a> </li>
+            <li> <a href="#"> resume </a> </li>
+            <li> <a href="#contact-anchor"> contact </a> </li>
+
         </ul>
     </nav>
         </div>
@@ -79,15 +47,15 @@
         <div id="page-content">
             <div class="main-background">
                 <div class="logo-container">
-                    <a href="#"><img src="../static/images/main-logo.png" class="main-logo"></a>
+                    <a href="{{ url_for("index") }}"><img src="../static/images/main-logo.png" class="main-logo"></a>
                 </div>
-                <div class="nav-bar">
+                <div class="nav-bar" id="window-nav-bar">
                     <ul id="nav-bar-options">
-                        <li> <a href="#nav-bar-options"> skills </a> </li>
+                        <li> <a href="#skills"> skills </a> </li>
                         <li> <a href="#projects"> projects </a> </li>
-                        <li> <a href="#"> experience </a> </li>
+                        <li> <a href="#experience-section"> experience </a> </li>
                         <li> <a href="#"> resume </a> </li>
-                        <li> <a href="#"> contact </a> </li>
+                        <li> <a href="#contact-anchor"> contact </a> </li>
                     </ul>
                 </div>
 
@@ -101,8 +69,8 @@
             </div>
 
             <div class="section" style="background-color: rgb(245, 245, 240); border: 1px solid rgb(245, 245, 240)">
-                <div class="sub-section">
-                    <h1 class="section-title"> <hr style="width: 23.6%" class="section-title-hr"> More about me <hr class="section-title-hr" style="width: 23.6%"> </h1>
+                <div class="sub-section" id="about-me-section">
+                    <h1 class="section-title"> <hr> About me <hr> </h1>
                         <div class="about-me">
                             <ul>
                                 <li> I'm currently a junior whose major is Engineering Physics. </li>
@@ -197,7 +165,7 @@
                                 </div>
                         </div>
 
-                        <div class="project-line">
+                        <div class="project-line" id="project-anchor">
                                 <div class="project-element" style="background-image: url('../static/images/nobugplease1.PNG')">
                                     <div class="overlay">
                                         <h3 class="project-element-title"> Forum Nobugplease </h3>
@@ -218,7 +186,7 @@
 
 
             <!---------Experience section--------->
-            <div class="experience-section">
+            <div class="experience-section" id="experience-section">
                 <div class="experience">
                     <h1 class="section-title"> <hr> Experience <hr> </h1>
                     <p class="section-description"> Since I'm still a Junior in college, I have only had a few jobs on campus :( </p>
@@ -260,7 +228,7 @@
 
             <div class="ending">
                 <div class="contact">
-                    <h1 class="contact-title"> Contact Me </h1>
+                    <h1 class="contact-title" id="contact-anchor"> Contact Me </h1>
                     <p class="contact-line"> For any further inquiry, please leave me a message :) </p>
 
                     <!---

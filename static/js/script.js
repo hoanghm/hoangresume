@@ -75,3 +75,22 @@ for (let i = 0; i < 6; i++) {
     });
 
 }
+
+document.getElementById("window-nav-bar").addEventListener("click", function () {
+   skillElements.map(function (cur) {
+       cur.style.display = "inline-block"
+   })
+    projectElements.map(function (cur) {
+        cur.style.display = "inline-block"
+    })
+});
+
+document.getElementById("mobile-nav-bar").addEventListener("click", function () {
+    document.getElementById('sidebar').classList.remove("active");
+   skillElements.map(function (cur) {
+       cur.style.display = "inline-block"
+   })
+    projectElements.map(function (cur) {
+        cur.style.display = "inline-block"
+    })
+});
