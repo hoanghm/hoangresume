@@ -282,6 +282,11 @@ hr {
     margin-bottom: 3px;
 }
 
+.project-element-description {
+    text-align: left;
+    padding: 10px;
+}
+
 .experience-section {
     width: 100%;
     background-color: white;
@@ -455,30 +460,6 @@ footer {
     cursor: pointer;
 }
 
-@media (max-width: 390px) {
-
-    .project-element {
-        width: 100px;
-        height: 160px;
-    }
-}
-
-@media(max-width: 600px) {
-
-    .experience-element-picture {
-        width: 95%;
-    }
-
-    .projects, .sub-section, .block {
-        width: 95%;
-    }
-
-    .contact-form {
-        width: 100%;
-    }
-
-}
-
 @media(max-width: 768px) {
 
     .project-element {
@@ -512,11 +493,11 @@ footer {
         display: inline-block;
     }
 
-    .block-description {
+    .block-description, .projects {
         width: 98%;
     }
 
-    .contact-form {
+    .contact-form, .sub-section {
         width: 95%;
     }
 
@@ -532,11 +513,51 @@ footer {
         width: 25%;
     }
 
+    #experience-section hr {
+        width: 15%;
+    }
+
+    .project-element {
+        width: 550px;
+        height: 300px;
+    }
+
+    .about-me {
+        width: 95%;
+    }
+
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+@media(max-width: 600px) {
 
+    .experience-element-picture {
+        width: 95%;
+    }
+
+    .projects, .sub-section, .block {
+        width: 95%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .project-element {
+        width: 550px;
+        height: 200px;
+    }
+
+}
+
+@media(max-width: 415px) {
+
+    .project-element {
+        width: 350px;
+        height: 220px;
+    }
+}
 

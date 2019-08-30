@@ -14,11 +14,13 @@ var skillPos = $("#skill-left-top").offset().top,
 
 $(window).ready(function () {
 
-    document.querySelector(".mobile-nav").style.width = $(window).width();
+    let windowWidth = $(window).width();
+
+    document.querySelector(".mobile-nav").style.width = windowWidth;
 
     let lastPos = 0;
    $(window).scroll(function () {
-       document.querySelector(".mobile-nav").style.width = $(window).width();
+       document.querySelector(".mobile-nav").style.width = windowWidth;
 
        var curPos = $(this).scrollTop();
 
@@ -39,21 +41,25 @@ $(window).ready(function () {
                 cur.classList.add("animated");
             });
 
-            skillElements.map(function (cur) {
-                cur.classList.add("fadeInLeft")
-            });
-            // document.getElementById("skill-left-top").classList.add("fadeInLeft");
-            // document.getElementById("skill-left-bot").classList.add("fadeInLeft");
-            // document.getElementById("skill-cen-top").classList.add("fadeInDown");
-            // document.getElementById("skill-cen-bot").classList.add("fadeInUp");
-            // document.getElementById("skill-right-top").classList.add("fadeInRight");
-            // document.getElementById("skill-right-bot").classList.add("fadeInRight");
+            if (windowWidth <= 1200) {
+                skillElements.map(function (cur) {
+                    cur.classList.add("fadeInLeft");
+                });
+            } else {
+                document.getElementById("skill-left-top").classList.add("fadeInLeft");
+                document.getElementById("skill-left-bot").classList.add("fadeInLeft");
+                document.getElementById("skill-cen-top").classList.add("fadeInDown");
+                document.getElementById("skill-cen-bot").classList.add("fadeInUp");
+                document.getElementById("skill-right-top").classList.add("fadeInRight");
+                document.getElementById("skill-right-bot").classList.add("fadeInRight");
+            }
        }
 
        if (curPos > projectPos + 1.6*windowHeight) {
             projectElements.map(function (cur) {
                cur.style.display = "inline-block";
-               cur.classList.add("fadeInDown", "animated");
+               cur.classList.add("zoomIn", "animated");
+               console.log($('.project-element').width());
             });
        }
 
