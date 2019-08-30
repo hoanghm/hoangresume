@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title> Hoang Ha </title>
+    <link rel="icon" href="../static/images/main-logo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/sidebarStyle.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+</head>
+
+<body>
+
+        <div class="mobile-nav">
+                    <a href="#" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
+                    <span id="mobile-toggle"><span class="fas fa-bars"></span></span>
+
+            <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+        </div>
+
+        <div id="page-content">
+            <div class="main-background">
+                <div class="logo-container">
+                    <a href="#"><img src="../static/images/main-logo.png" class="main-logo"></a>
+                </div>
+                <div class="nav-bar">
+                    <ul id="nav-bar-options">
+                        <li> <a href="#nav-bar-options"> skills </a> </li>
+                        <li> <a href="#projects"> projects </a> </li>
+                        <li> <a href="#"> experience </a> </li>
+                        <li> <a href="#"> resume </a> </li>
+                        <li> <a href="#"> contact </a> </li>
+                    </ul>
+                </div>
+
+                    <div class="main-description wow fadeInLeft animated" data-wow-delay="0.5s">
+                        <p id="greetings">Hi, I'm Hoang.</p>
+                        <p>
+                            Let's build something cool together.
+                        </p>
+                    </div>
+
+            </div>
+
+            <div class="section" style="background-color: rgb(245, 245, 240); border: 1px solid rgb(245, 245, 240)">
+                <div class="sub-section">
+                    <h1 class="section-title"> <hr style="width: 23.6%" class="section-title-hr"> More about me <hr class="section-title-hr" style="width: 23.6%"> </h1>
+                        <div class="about-me">
+                            <ul>
+                                <li> I'm currently a junior whose major is Engineering Physics. </li>
+                                <li> After I have finished my B.S in Physics from Juniata College this year, I'll transfer to another school to get a B.S in Computer Science in 2 years. </li>
+                                <li> My current goal is to become a robotics engineer or a machine-learning programmer. However, I keep my options open. </li>
+                                <li> I'm looking for an internship relating to programming next summer 2020.</li>
+                                <li> Click <a href="#">here</a> to see my resume. </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+            <!---------Skills section--------->
+            <div class="section">
+                <div class="sub-section" id="skills">
+                    <h1 class="section-title"> <hr> Skills <hr> </h1>
+                    <p> Hover on each skill to see the details. </p>
+                    <div class="skill-line">
+                        <div class="skill-element" id="skill-left-top">
+                            <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
+                                <div class="skill-name">Python</div>
+                            </div>
+                            <div class="skill-description"> Best and favorite language. Solid understanding of both fundamental and advanced concepts. </div>
+                        </div>
+
+                        <div class="skill-element" id="skill-cen-top">
+                            <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
+                                <div class="skill-name">C++</div>
+                            </div>
+                            <div class="skill-description"> 2 years experience with C++. Very familiar with syntax, uses of pointer, etc. </div>
+                        </div>
+
+                        <div class="skill-element" id="skill-right-top">
+                            <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
+                                <div class="skill-name">OS</div>
+                            </div>
+                            <div class="skill-description"> Comfortable with all 3 major OSs: Windows, Mac, Linux (debian and ubuntu based). </div>
+                        </div>
+
+                        <div class="skill-element" id="skill-left-bot">
+                            <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
+                                <div class="skill-name">Java</div>
+                            </div>
+                            <div class="skill-description"> 2+ years experience with Java. Deep understanding about Java OOP and special features such as the garbage collector. </div>
+                        </div>
+
+                        <div class="skill-element" id="skill-cen-bot">
+                            <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
+                                <div class="skill-name">Dev</div>
+                            </div>
+                            <div class="skill-description"> Fluent in HTML, CSS, Javascript (and a little bit of AJAX, Jquery). Very familiar with Flask. </div>
+                        </div>
+
+                        <div class="skill-element" id="skill-right-bot">
+                            <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
+                                <div class="skill-name">Boards</div>
+                            </div>
+                            <div class="skill-description"> Numerous hands-on experience, personal projects with Arduino and RaspberryPi. </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!---------Projects section--------->
+            <div class="project-section section">
+                <div class="projects" id="projects">
+                    <h1 class="section-title"> <hr> Projects <hr> </h1>
+
+                    <p style="margin-bottom: 50px; width: 80%; display: inline-block">
+                        These are some of my personal projects. I have done a lot of projects, but most are small and only serve for the purpose of experimenting.
+                    </p>
+
+                        <div class="project-line">
+                            <div class="project-element" style="background-image: url('../static/images/resume-project.PNG')">
+                                    <div class="overlay">
+                                        <h3 class="project-element-title"> This website </h3>
+                                        <p style="text-align: left; padding: 10px;"> &nbsp; I designed and created this website from scratch using HTML, CSS, JS , JQuery, and Flask.
+                                            Although a platform like Flask is not very necessary for this website at the moment, I still use one because I may want
+                                            to upgrade the website into a blog later on.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="project-element" style="background-image: url('../static/images/hexapod.jpg');">
+                                    <div class="overlay">
+                                        <h3 class="project-element-title"> Hexapod Spidy </h3>
+                                        <p>  </p>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="project-line">
+                                <div class="project-element" style="background-image: url('../static/images/nobugplease1.PNG')">
+                                    <div class="overlay">
+                                        <h3 class="project-element-title"> Forum Nobugplease </h3>
+                                        <p> This is a project that I have completed. </p>
+                                    </div>
+                                </div>
+
+                                <div class="project-element" style="background-image: url('../static/images/ledfan.jpg')">
+                                    <div class="overlay">
+                                        <h3 class="project-element-title"> LED fan </h3>
+                                        <p> This is a project that I have completed. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+
+
+            <!---------Experience section--------->
+            <div class="experience-section">
+                <div class="experience">
+                    <h1 class="section-title"> <hr> Experience <hr> </h1>
+                    <p class="section-description"> Since I'm still a Junior in college, I have only had a few jobs on campus :( </p>
+
+                            <div style="width: 80%; display: inline-block">
+                                <p style="float: left; margin-bottom: 0;"> <b>Juniata College,</b> Huntingdon, Pennsylvania </p>
+                            </div>
+
+                            <div class="block">
+                                <p class="job-title"> Intro Physics lab Teaching assistant </p>
+                                <p class="job-time"> (August 2018 - Now) </p>
+                                <img src="../static/images/physics-lab.jpg" class="experience-element-picture">
+                                <div class="block-description">
+                                    <p style="margin-top: 20px">Job responsibilities:</p>
+                                    <ul>
+                                        <li>Assist and supervise students with their lab work using well developed technical and communication skills. </li>
+                                        <li>Carefully manage the equipment before and after every lab session. </li>
+                                        <li>Grade lab reports and quizzes with high responsibility and integrity.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <p class="job-title"> Computer Science, Calculus, Physics tutor </p>
+                                <p class="job-time"> (Feb 2018 - Now) </p>
+                                <img src="../static/images/tutor.jpg" class="experience-element-picture">
+                                <div class="block-description">
+                                    <p> I group these jobs into one because they are very similar.</p>
+                                    <p style="margin-top: 20px">Job responsibilities:</p>
+                                    <ul>
+                                        <li> Give group tutoring sessions every week to enhance students’ academic performance.  </li>
+                                        <li> Provide one on one help for students with special needs. </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+
+            <div class="ending">
+                <div class="contact">
+                    <h1 class="contact-title"> Contact Me </h1>
+                    <p class="contact-line"> For any further inquiry, please leave me a message :) </p>
+
+                    <!---
+                    <form class="contact-form" method="post">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name..." name="name">
+                            <input type="email" class="form-control" placeholder="Email..." name="email">
+                            <textarea name="message" id="" cols="30" rows="10" class="form-control" placeholder="Message..."></textarea>
+                            <button type="submit" class="btn contact-button"> Send Inquiry </button>
+                        </div>
+
+                        <p> ...Or you can send me a direct email to <a href="mailto:hoanghm4@gmail.com">hoanghm4@gmail.com</a></p>
+
+                    </form>
+                    --->
+
+                    <form class="contact-form" method="POST">
+
+                        <div class="form-group">
+                            {{ form.name(class="form-control", placeholder="Name...") }}
+                            {{ form.email(class="form-control", placeholder="Email...") }}
+                            {{ form.message(class="form-control", cols="30", rows="10", placeholder="Message...") }}
+                            <div style="width: 100%; height: 20px;"></div>
+                            {{ form.submit(class="form-control btn contact-button") }}
+                        </div>
+
+                        <p> ...Or you can send me a direct email to <a href="mailto:hoanghm4@gmail.com">hoanghm4@gmail.com</a></p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+
+<footer>
+    <p class="medias">
+        <a href="#"><span class="fab fa-facebook-square"></span></a>
+        <a href="#"><span class="fab fa-github-square"></span></a>
+        <a href="#"><span class="fab fa-linkedin"></span></a>
+    </p>
+    <span class="far fa-copyright"></span> Hoang Ha 2019. All rights reserved.
+    <script type="text/javascript" src="../static/js/script.js"></script>
+</footer>
+
+</html>
