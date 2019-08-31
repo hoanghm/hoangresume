@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, flash
 from flask_wtf import Form
 from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import required, Email
@@ -8,7 +8,8 @@ import os
 
 # config
 class Config:
-    SECRET_KEY = os.environ .get("SECRET_KEY")
+    SECRET_KEY = "abcde"
+    # SECRET_KEY = os.environ .get("SECRET_KEY")
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
@@ -48,7 +49,9 @@ def index():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
+        flash("Inquiry received! Thank you for contacting me.")
         return redirect(url_for('index'))
+    flash("testinggggggggggggg")
     return render_template('index.html', form=form)
 
 @app.route('/<anything>')
