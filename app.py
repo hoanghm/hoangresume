@@ -8,7 +8,7 @@ import os
 
 # config
 class Config:
-    SECRET_KEY = 'S0m3thing v3ry difficult'
+    SECRET_KEY = os.environ .get("SECRET_KEY")
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
