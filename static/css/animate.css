@@ -1447,6 +1447,8 @@
 @-webkit-keyframes fadeInLeft {
   from {
     opacity: 0;
+    -webkit-transform-origin: 50% 50%; /*update here*/
+    transform-origin: 50% 50%;/*update here*/
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
@@ -1461,6 +1463,8 @@
 @keyframes fadeInLeft {
   from {
     opacity: 0;
+    -webkit-transform-origin: 50% 50%; /*update here*/
+    transform-origin: 50% 50%;/*update here*/
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
@@ -1473,6 +1477,8 @@
 }
 
 .fadeInLeft {
+	-webkit-transform-origin: 50% 50%; /*update here*/
+    transform-origin: 50% 50%;/*update here*/
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
@@ -1998,6 +2004,8 @@
 
 @-webkit-keyframes flipInX {
   from {
+  	-webkit-transform-origin: 50% 50%; /*update here*/
+    transform-origin: 50% 50%;/*update here*/
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     -webkit-animation-timing-function: ease-in;
@@ -2031,6 +2039,8 @@
 
 @keyframes flipInX {
   from {
+  	-webkit-transform-origin: 50% 50%; /*update here*/
+    transform-origin: 50% 50%;/*update here*/
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     -webkit-animation-timing-function: ease-in;
@@ -2063,6 +2073,8 @@
 }
 
 .flipInX {
+	-webkit-transform-origin: 50% 50%; /*update here*/
+    transform-origin: 50% 50%;/*update here*/
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
