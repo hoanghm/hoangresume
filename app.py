@@ -42,11 +42,11 @@ def send_email(to, subject, template, **kwargs):
     mail.send(msg)
 
 
-@app.before_request
-def before_request():
-    if request.url.startswith('http://'):
-        url = request.url.replace('http://', 'https://', 1)
-        return redirect(url, code=301)
+# @app.before_request
+# def before_request():
+#     if request.url.startswith('http://'):
+#         url = request.url.replace('http://', 'https://', 1)
+#         return redirect(url, code=301)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
