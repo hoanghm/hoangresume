@@ -28,7 +28,7 @@ $(window).ready(function () {
            document.querySelector(".mobile-nav").style.marginTop = "-50px";
        }
 
-       else if (curPos < lastPos) {
+       if ((curPos < lastPos) || curPos == 0) {
            document.querySelector(".mobile-nav").style.marginTop = "0";
        }
 
