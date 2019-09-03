@@ -24,11 +24,11 @@ $(window).ready(function () {
 
        var curPos = $(this).scrollTop();
 
-       if (curPos > lastPos) {
+       if (curPos - lastPos > 5) {
            document.querySelector(".mobile-nav").style.marginTop = "-50px";
        }
 
-       if ((curPos < lastPos) || curPos == 0) {
+       if ((curPos - lastPos < -5) || curPos == 0) {
            document.querySelector(".mobile-nav").style.marginTop = "0";
        }
 
