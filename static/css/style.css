@@ -65,16 +65,17 @@ hr {
 }
 
 .main-description {
-    opacity: 0.8;
+    opacity: 0;
     position: absolute;
     padding-left: 10px;
-    left: 18%;
+    left: -350px;
     top: 25%;
     width: 500px;
     height: auto;
     color: white;
     border-left: rgb(255, 51, 51) 10px solid;
     transition-delay: 2s;
+    transition: left 1.5s, opacity 2s;
 }
 
 .main-description p {
@@ -280,6 +281,10 @@ hr {
     background-position: center;
     background-size: cover;
     margin-bottom: 3px;
+}
+
+.project-element h3 {
+    text-decoration: underline;
 }
 
 .project-element-description {
@@ -501,9 +506,6 @@ footer {
         width: 95%;
     }
 
-    .main-description {
-        left: 5%;
-    }
 
     hr, #about-me-section hr {
         width: 20%;

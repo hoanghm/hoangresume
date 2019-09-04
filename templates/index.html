@@ -16,11 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <script src="../static/js/smoothscroll.min.js"></script>
     <script src="../static/js/jquery-3.4.1.min.js"></script>
-    <script src="../static/js/wow.min.js"></script>
 
-    <script>
-        new WOW().init();
-    </script>
 </head>
 
 <body>
@@ -36,12 +32,12 @@
 
         <ul class="list-unstyled components" id="mobile-nav-bar">
 
-            <li> <a href="#about-me-section"> About me </a> </li>
-            <li> <a href="#skills"> Skills </a> </li>
-            <li> <a href="#projects"> Projects </a> </li>
-            <li> <a href="#experience-section"> Experience </a> </li>
+            <li> <a class="scroll-to-aboutme"> About me </a> </li>
+            <li> <a href="#skills" class="scroll-to-skills"> Skills </a> </li>
+            <li> <a href="#projects" class="scroll-to-projects"> Projects </a> </li>
+            <li> <a href="#experience-section" class="scroll-to-experience"> Experience </a> </li>
             <li> <a href="../static/others/Ha%20Resume.docx"> Resume </a> </li>
-            <li> <a href="#contact-anchor"> Contact </a> </li>
+            <li> <a href="#contact-anchor" class="scroll-to-contact"> Contact </a> </li>
 
         </ul>
     </nav>
@@ -54,6 +50,7 @@
                 </div>
                 <div class="nav-bar" id="window-nav-bar">
                     <ul id="nav-bar-options">
+                        <li><a class="scroll-to-aboutme"> about me </a> </li>
                         <li> <a href="#skills"> skills </a> </li>
                         <li> <a href="#projects"> projects </a> </li>
                         <li> <a href="#experience-section"> experience </a> </li>
@@ -62,7 +59,7 @@
                     </ul>
                 </div>
 
-                    <div class="main-description wow fadeInLeft animated" data-wow-delay="0.5s">
+                    <div class="main-description">
                         <p id="greetings">Hi, I'm Hoang.</p>
                         <p>
                             Let's build something cool together.
