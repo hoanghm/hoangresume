@@ -2,15 +2,15 @@
 
 (function() {
 
-
-    let scrollToAboutmes = document.querySelectorAll(".scroll-to-aboutme");
-    for (let i = 0; i < scrollToAboutmes.length; i++) {
-        scrollToAboutmes[i].addEventListener("click", function () {
-           document.querySelector("#about-me-section").scrollIntoView({
-               behavior: 'smooth'
-           });
-        });
-    }
+    // Add smooth scroll effect to the anchors
+    let anchors =  document.querySelectorAll(".anchor-link");
+    anchors = Array.prototype.slice.call(anchors);
+    anchors.map(function (cur) {
+        let targetID = cur.classList[1].slice(0,-7);
+        cur.addEventListener("click", function () {
+            document.getElementById(targetID).scrollIntoView({behavior: 'smooth'});
+        })
+    });
 
 
 

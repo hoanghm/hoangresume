@@ -27,6 +27,10 @@ hr {
     border: none;
 }
 
+.anchor-link:hover {
+    cursor: pointer;
+}
+
 .logo-container {
     text-align: center;
     left: 3%;
