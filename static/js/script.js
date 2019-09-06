@@ -21,14 +21,19 @@
     projectElements = Array.prototype.slice.call(projectElements);
 
 
-    var skillPos = $("#skill-left-top").offset().top,
-        windowHeight = $(window).height(),
-        projectPos = $(".project-element").offset().top;
-
-
     $(window).ready(function () {
 
+        let skillPos = $("#skill-left-top").offset().top + $("#skill-left-top").outerHeight(),
+            windowHeight = $(window).height(),
+            projectPos = $(".project-element").offset().top + $(".project-element").outerHeight();
+        console.log(projectPos);
+
         let windowWidth = $(window).width();
+
+        if (windowWidth < 780) {
+            projectPos += 1200;
+            console.log(projectPos)
+        }
 
         //Slide the greetings to the right
         setTimeout(function () {
@@ -59,8 +64,9 @@
 
             lastPos = curPos;
 
+            console.log("curpos: " + curPos + "    " + "skillPos: " + skillPos);
 
-            if (curPos > skillPos + 0.8 * windowHeight) {
+            if (curPos > skillPos + windowHeight) {
                 skillElements.map(function (cur) {
                     cur.style.display = "inline-block";
                     cur.classList.add("animated");
@@ -80,7 +86,7 @@
                 }
             }
 
-            if (curPos > projectPos + 1.6 * windowHeight) {
+            if (curPos > projectPos + windowHeight) {
                 projectElements.map(function (cur) {
                     cur.style.display = "inline-block";
                     cur.classList.add("zoomIn", "animated");
