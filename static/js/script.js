@@ -8,7 +8,7 @@
     anchors.map(function (cur) {
         let targetID = cur.classList[1].slice(0,-7);
         cur.addEventListener("click", function () {
-            document.getElementById(targetID).scrollIntoView({behavior: 'smooth'});
+            document.getElementById(targetID).scrollIntoView({behavior: 'smooth', alignToTop: true});
         })
     });
 
