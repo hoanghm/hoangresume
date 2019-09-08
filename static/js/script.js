@@ -66,7 +66,7 @@
 
             console.log("curpos: " + curPos + "    " + "skillPos: " + skillPos);
 
-            if (curPos > skillPos + windowHeight) {
+            if (curPos > skillPos + 0.8*windowHeight) {
                 skillElements.map(function (cur) {
                     cur.style.display = "inline-block";
                     cur.classList.add("animated");
