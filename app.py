@@ -15,6 +15,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    RESUME_LINK = os.environ.get("RESUME_LINK")
     MAIL_DEFAULT_SENDER = 'hoanghm4@gmail.com'
 
 
@@ -58,8 +59,7 @@ def index():
         send_email("hoanghm4@gmail.com", name, message + " " + email)
         flash("Inquiry received! Thank you for contacting me.")
         return redirect(url_for('index'))
-    flash("testinggggggggggggg")
-    return render_template('index.html', form=form)
+    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"])
 
 @app.route('/<anything>')
 def error_404(anything):

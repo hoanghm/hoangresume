@@ -1,1 +1,1 @@
-C:\Users\hoang\Anaconda3
+c:\users\hoang\appdata\local\programs\python\python37-32
