@@ -69,10 +69,19 @@ def index():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
-        inq.setSubmitted(True)
-        inq.setGuestName(name)
-        return redirect(url_for("index"))
-    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=inq.getSubmitted(), name=inq.getGuestName())
+        return redirect(url_for("form_submitted"))
+    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=False)
+
+@app.route('/submitted', methods=['GET', 'POST'])
+def form_submitted():
+    form = ContactForm()
+    if request.method == "POST":
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        send_email("hoanghm4@gmail.com", name, message + " " + email)
+        return redirect(url_for("form_submitted"))
+    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=True)
 
 @app.route('/<anything>')
 def error_404(anything):
