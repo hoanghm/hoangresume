@@ -42,13 +42,25 @@ def send_email(to, subject, template, **kwargs):
     msg.body = template
     mail.send(msg)
 
+class InquiryManager():
+    def __init__(self):
+        self.submitted = False
+        self.guest_name = None
+    def getSubmitted(self):
+        return self.submitted
+    def getGuestName(self):
+        return self.guest_name
+    def setSubmitted(self, val):
+        self.submitted = val
+    def setGuestName(self, name):
+        self.guest_name = name
 
 # @app.before_request
 # def before_request():
 #     if request.url.startswith('http://'):
 #         url = request.url.replace('http://', 'https://', 1)
 #         return redirect(url, code=301)
-
+inq  = InquiryManager()
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = ContactForm()
@@ -57,9 +69,10 @@ def index():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
-        flash("Inquiry received! Thank you for contacting me.")
-        return redirect(url_for('index'))
-    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"])
+        inq.setSubmitted(True)
+        inq.setGuestName(name)
+        return redirect(url_for("index"))
+    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=inq.getSubmitted(), name=inq.getGuestName())
 
 @app.route('/<anything>')
 def error_404(anything):
