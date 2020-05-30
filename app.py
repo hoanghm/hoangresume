@@ -58,7 +58,7 @@ class InquiryManager():
 
 @app.before_request
 def before_request():
-    if 'http://' in request.url:
+    if not request.is_secure:
         url = request.url.replace('http://', 'https://', 1)
         print("old url:", request.url)
         print("modified url:", url)
