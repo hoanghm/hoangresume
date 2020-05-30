@@ -58,7 +58,8 @@ class InquiryManager():
 
 @app.before_request
 def before_request():
-    print(request.headers)
+    print("headers: ",request.headers, "/n-------------")
+    print("type: ", type(request.headers))
 
 
 @app.route('/', methods=['GET', 'POST'])
