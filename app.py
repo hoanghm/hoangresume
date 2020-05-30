@@ -58,9 +58,9 @@ class InquiryManager():
 
 @app.before_request
 def before_request():
-    if request.url.startswith('http://'):
+    if 'http://' in request.url:
         url = request.url.replace('http://', 'https://', 1)
-        return redirect(url, code=301)
+        return redirect(url)
 
 
 @app.route('/', methods=['GET', 'POST'])
