@@ -62,7 +62,7 @@ def before_request():
         url = request.url.replace('http://', 'https://', 1)
         print("old url:", request.url)
         print("modified url:", url)
-        return redirect(url)
+        return redirect(url, code=301)
 
 
 @app.route('/', methods=['GET', 'POST'])
