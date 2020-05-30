@@ -56,12 +56,13 @@ class InquiryManager():
     def setGuestName(self, name):
         self.guest_name = name
 
-# @app.before_request
-# def before_request():
-#     if request.url.startswith('http://'):
-#         url = request.url.replace('http://', 'https://', 1)
-#         return redirect(url, code=301)
-inq  = InquiryManager()
+@app.before_request
+def before_request():
+    if request.url.startswith('http://'):
+        url = request.url.replace('http://', 'https://', 1)
+        return redirect(url, code=301)
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     form = ContactForm()
