@@ -60,6 +60,8 @@ class InquiryManager():
 def before_request():
     if 'http://' in request.url:
         url = request.url.replace('http://', 'https://', 1)
+        print("old url:", request.url)
+        print("modified url:", url)
         return redirect(url)
 
 
