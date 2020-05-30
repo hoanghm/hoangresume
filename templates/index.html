@@ -32,7 +32,7 @@
 <body>
 
         <div class="mobile-nav">
-                    <a href="{{ url_for("index") }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
+                    <a href="{{ url_for("index", _scheme="https", _external=True) }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
                     <span id="mobile-toggle"><span class="fas fa-bars"></span></span>
 
             <nav id="sidebar">
