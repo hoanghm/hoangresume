@@ -58,8 +58,8 @@ class InquiryManager():
 
 @app.before_request
 def before_request():
-    if 'https://' not in request.url:
-        urll = request.url.replace('http://', 'https://', 1)
+    if 'https://' in request.url:
+        urll = request.url.replace('https://', 'http://', 1)
         print("old url:", request.url)
         print("modified url:", urll)
         return redirect(urll, 301)
@@ -69,30 +69,29 @@ def before_request():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return '<h1> Hello World </h1>'
-#     form = ContactForm()
-#     if request.method == "POST":
-#         name = request.form['name']
-#         email = request.form['email']
-#         message = request.form['message']
-#         send_email("hoanghm4@gmail.com", name, message + " " + email)
-#         return redirect(url_for("form_submitted"))
-#     return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=False)
-#
-# @app.route('/submitted', methods=['GET', 'POST'])
-# def form_submitted():
-#     form = ContactForm()
-#     if request.method == "POST":
-#         name = request.form['name']
-#         email = request.form['email']
-#         message = request.form['message']
-#         send_email("hoanghm4@gmail.com", name, message + " " + email)
-#         return redirect(url_for("form_submitted"))
-#     return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=True)
-#
-# @app.route('/<anything>')
-# def error_404(anything):
-#     return "<h1> Hey! Where do you think you're going buddy? </h1> "
+    form = ContactForm()
+    if request.method == "POST":
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        send_email("hoanghm4@gmail.com", name, message + " " + email)
+        return redirect(url_for("form_submitted"))
+    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=False)
+
+@app.route('/submitted', methods=['GET', 'POST'])
+def form_submitted():
+    form = ContactForm()
+    if request.method == "POST":
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        send_email("hoanghm4@gmail.com", name, message + " " + email)
+        return redirect(url_for("form_submitted"))
+    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=True)
+
+@app.route('/<anything>')
+def error_404(anything):
+    return "<h1> Hey! Where do you think you're going buddy? </h1> "
 
 
 if __name__ == '__main__':
