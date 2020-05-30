@@ -58,14 +58,7 @@ class InquiryManager():
 
 @app.before_request
 def before_request():
-    print("cur_url:", request.url)
-    if 'https' in request.url:
-        urll = request.url.replace('https://', 'http://', 1)
-        print("old url:", request.url)
-        print("modified url:", urll)
-        return redirect(urll, 301)
-    else:
-        pass
+    print(request.headers)
 
 
 @app.route('/', methods=['GET', 'POST'])
