@@ -58,7 +58,7 @@ class InquiryManager():
 
 @app.before_request
 def before_request():
-    if request.headers('X-Forwarded-Proto') == "http":
+    if request.headers.get('X-Forwarded-Proto') == "http":
         url = request.url.replace("http", "https", 1)
         return redirect(url)
 
