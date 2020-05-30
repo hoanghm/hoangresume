@@ -3,6 +3,7 @@ from flask_wtf import Form
 from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import required, Email
 from flask_mail import Mail, Message
+from flask_login import current_user
 import os
 
 
