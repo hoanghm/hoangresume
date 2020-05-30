@@ -73,7 +73,7 @@ def index():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
-        return redirect(url_for("form_submitted"))
+        return redirect(url_for("form_submitted", _scheme="https"))
     return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=False)
 
 @app.route('/submitted', methods=['GET', 'POST'])
