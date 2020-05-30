@@ -56,13 +56,13 @@ class InquiryManager():
     def setGuestName(self, name):
         self.guest_name = name
 
-@app.before_request
-def before_request():
-    if not request.is_secure:
-        url = request.url.replace('http://', 'https://', 1)
-        print("old url:", request.url)
-        print("modified url:", url)
-        return redirect(url, code=301)
+# @app.before_request
+# def before_request():
+#     if not request.is_secure:
+#         url = request.url.replace('http://', 'https://', 1)
+#         print("old url:", request.url)
+#         print("modified url:", url)
+#         return redirect(url, code=301)
 
 
 @app.route('/', methods=['GET', 'POST'])
