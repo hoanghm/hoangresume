@@ -56,13 +56,13 @@ class InquiryManager():
     def setGuestName(self, name):
         self.guest_name = name
 
-# @app.before_request
-# def before_request():
-#     if 'https://' not in request.url:
-#         urll = request.url.replace('http://', 'https://', 1)
-#         print("old url:", request.url)
-#         print("modified url:", urll)
-#         return redirect(urll, 301)
+@app.before_request
+def before_request():
+    if 'https://' not in request.url:
+        urll = request.url.replace('http://', 'https://', 1)
+        print("old url:", request.url)
+        print("modified url:", urll)
+        return redirect(urll, 301)
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -73,7 +73,7 @@ def index():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
-        return redirect(url_for("form_submitted", _scheme="https", _external=True))
+        return redirect(url_for("form_submitted"))
     return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=False)
 
 @app.route('/submitted', methods=['GET', 'POST'])
@@ -84,12 +84,12 @@ def form_submitted():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
-        return redirect("https://www.hoang.work/")
+        return redirect(url_for("form_submitted"))
     return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=True)
 
-@app.route('/<anything>')
-def error_404(anything):
-    return "<h1> Hey! Where do you think you're going buddy? </h1> "
+# @app.route('/<anything>')
+# def error_404(anything):
+#     return "<h1> Hey! Where do you think you're going buddy? </h1> "
 
 
 if __name__ == '__main__':
