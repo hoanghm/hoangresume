@@ -18,6 +18,7 @@
 
 
     <title> Hoang Ha </title>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <link rel="icon" href="../static/images/main-logo.png" type="image/icon type">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/sidebarStyle.css">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     <script src="../static/js/jquery-3.4.1.min.js"></script>
-
+    <base target="_blank">
 </head>
 
 <body>
@@ -59,6 +60,14 @@
                 <div class="logo-container">
                     <a href="{{ url_for("index") }}"><img src="../static/images/main-logo.png" class="main-logo"></a>
                 </div>
+
+                <div class="linkedin-container" target="_blank">
+                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US"
+                               data-type="horizontal" data-theme="dark" data-vanity="hoangha98">
+                        <a class="LI-simple-link" target="_blank" href='https://www.linkedin.com/in/hoangha98?trk=profile-badge'>Hoang Ha</a>
+                    </div>
+                </div>
+
                 <div class="nav-bar" id="window-nav-bar">
                     <ul id="nav-bar-options">
                         <li class="anchor-link skills-anchor"> <a> skills </a> </li>
@@ -92,11 +101,12 @@
                     <h1 class="section-title"> <hr> About me <hr> </h1>
                         <div class="about-me">
                             <ul>
-                                <li> I'm currently a junior whose major is Engineering Physics. </li>
-                                <li> After I have finished my B.S in Physics from Juniata College this year, I'll transfer to another school to get a B.S in Computer Science in 2 years. </li>
-                                <li> My current goal is to become a robotics engineer or a machine-learning programmer. However, I keep my options open. </li>
-                                <li> I'm looking for an internship relating to programming next summer 2020.</li>
+                                <li> I just finished my B.S in Engineering Physics (Juniata College) May 2020. </li>
+                                <li> I am pursuing a B.S in Computer Science and a M.S in Machine Learning at Wash U where I'm considered a graduate student. (Expected Graduation May 2023) </li>
+                                <li> My current goal is to become a Robotics Engineer or a Machine Learning engineer. </li>
+                                <li> I'm looking for an internship relating to Data Science/ Machine Learning next summer 2021.</li>
                                 <li> Click <a href={{ resume_link }} target="_blank">here</a> to see my resume. </li>
+                                <li> Click <a href="https://drive.google.com/file/d/1DRUVj3DlZgvduIVDuz4DOQA5AVhVaTQ5/view?usp=sharing" target="_blank">here</a> to see my transcript. </li>
                             </ul>
                         </div>
                 </div>
@@ -106,7 +116,7 @@
             <div class="section">
                 <div class="sub-section" id="skills">
                     <h1 class="section-title"> <hr> Skills <hr> </h1>
-                    <p> Hover on each skill to see the details. </p>
+                    <p> Hover on each skill for details. </p>
                     <div class="skill-line">
                         <div class="skill-element" id="skill-left-top">
                             <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
@@ -124,9 +134,9 @@
 
                         <div class="skill-element" id="skill-right-top">
                             <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
-                                <div class="skill-name">OS</div>
+                                <div class="skill-name">ML</div>
                             </div>
-                            <div class="skill-description"> Comfortable with all 3 major OSs: Windows, Mac, Linux (debian based). </div>
+                            <div class="skill-description"> Hands-on experience with Scikit-learn, Numpy, Pandas, and TensorFlow through personal projects and competitons on Kaggle. </div>
                         </div>
 
                         <div class="skill-element" id="skill-left-bot">
@@ -140,7 +150,7 @@
                             <div class="skill-image-container"> <img src="../static/images/skill-background.jpg" class="skill-image">
                                 <div class="skill-name">Dev</div>
                             </div>
-                            <div class="skill-description"> Fluent in HTML, CSS, Javascript (and a little bit of AJAX, Jquery). Very familiar with Flask. </div>
+                            <div class="skill-description"> Fluent in HTML, CSS, Javascript (and a little of Jquery). Very familiar with Flask. </div>
                         </div>
 
                         <div class="skill-element" id="skill-right-bot">
@@ -228,7 +238,7 @@
 
                             <div class="block">
                                 <p class="job-title"> Intro Physics lab Teaching assistant </p>
-                                <p class="job-time"> (August 2018 - Now) </p>
+                                <p class="job-time"> (August 2018 - April 2021) </p>
                                 <img src="../static/images/physics-lab.jpg" class="experience-element-picture">
                                 <div class="block-description">
                                     <p style="margin-top: 20px">Job responsibilities:</p>
@@ -242,7 +252,7 @@
 
                             <div class="block">
                                 <p class="job-title"> Computer Science, Calculus, Physics tutor </p>
-                                <p class="job-time"> (Feb 2018 - Now) </p>
+                                <p class="job-time"> (Feb 2018 - April 2021) </p>
                                 <img src="../static/images/tutor.jpg" class="experience-element-picture">
                                 <div class="block-description">
                                     <p> I group these jobs into one because they are very similar.</p>
@@ -305,7 +315,7 @@
         <a href="https://github.com/hoanghm" target="_blank"><span class="fab fa-github-square"></span></a>
         <a href="https://www.linkedin.com/in/hoangha98/" target="_blank"><span class="fab fa-linkedin"></span></a>
     </p>
-    <span class="far fa-copyright"></span> Hoang Ha 2019. All rights reserved.
+    <span class="far fa-copyright"></span> Hoang Ha 2019.
     <script type="text/javascript" src="../static/js/script.js"></script>
 </footer>
 

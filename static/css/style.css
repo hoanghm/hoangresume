@@ -532,6 +532,10 @@ footer {
         width: 95%;
     }
 
+    .linkedin-container {
+        display: None;
+    }
+
 }
 
 html {
@@ -557,6 +561,10 @@ html {
         height: 200px;
     }
 
+    .linkedin-container {
+        display: None;
+    }
+
 }
 
 @media(max-width: 415px) {
@@ -565,5 +573,35 @@ html {
         width: 350px;
         height: 220px;
     }
+
+    .linkedin-container {
+        display: None;
+    }
+}
+
+.linkedin-container {
+    right: 6%;
+    top: 15%;
+    position: absolute;
+    opacity: 0.8;
+
+}
+
+.LI-badge-container-horizontal-dark {
+    border-radius: 15px !IMPORTANT;
+}
+
+.LI-badge-container-horizontal-dark a:hover {
+    color: rgb(255, 166, 77) !important;
+    transition: 0.1s;
+}
+
+.LI-badge-container-horizontal-dark a {
+    target: '_n'
+}
+
+.LI-view-profile {
+    target: "_blank" !important;
+    target-new: tab; !important;
 }
 
