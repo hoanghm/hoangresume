@@ -9,7 +9,8 @@ from flask_login import LoginManager
 # config
 basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
-    SECRET_KEY = os.environ .get("SECRET_KEY")
+    # SECRET_KEY = os.environ.get("SECRET_KEY")
+    SECRET_KEY = 'default'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     MAIL_SERVER = 'smtp.gmail.com'
@@ -38,7 +39,7 @@ bootstrap.init_app(app)
 login_manager.init_app(app)
 
 
-from main.models import User, AnonymousUser
+from main.models import User, AnonymousUser, Role
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'page.login'
 login_manager.anonymous_user = AnonymousUser
@@ -55,4 +56,8 @@ app.register_blueprint(page_blueprint)
 
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
+        Role.insert_roles()
+        User.insert_admin()
     app.run()
