@@ -129,7 +129,11 @@ def change_password():
     if form.validate_on_submit():
         old_pw = form.old_pw.data
         new_pw = form.new_pw.data
+        confirm_pw = form.confirm_pw.data
         if current_user.verify_password(old_pw):
+            if new_pw != confirm_pw:
+                flash('Passwords do not match.')
+                return redirect(url_for('page.change_password'))
             current_user.password = new_pw
             db.session.commit()
             flash('Password changed successfully!')

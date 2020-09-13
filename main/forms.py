@@ -33,4 +33,5 @@ class LoginForm(Form):
 class ChangePasswordForm(Form):
     old_pw = PasswordField(validators=[required()])
     new_pw = PasswordField(validators=[required()])
+    confirm_pw = PasswordField(validators=[required()])
     submit = SubmitField(label='Change Password')

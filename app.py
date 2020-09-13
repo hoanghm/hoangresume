@@ -9,9 +9,10 @@ from flask_login import LoginManager
 # config
 basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
-    # SECRET_KEY = os.environ.get("SECRET_KEY")
-    SECRET_KEY = 'default'
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+    # SECRET_KEY = 'default'
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
