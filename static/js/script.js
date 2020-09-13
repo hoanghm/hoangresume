@@ -26,13 +26,11 @@
         let skillPos = $("#skill-left-top").offset().top + $("#skill-left-top").outerHeight(),
             windowHeight = $(window).height(),
             projectPos = $(".project-element").offset().top + $(".project-element").outerHeight();
-        console.log(projectPos);
 
         let windowWidth = $(window).width();
 
         if (windowWidth < 780) {
             projectPos += 1200;
-            console.log(projectPos)
         }
 
         //Slide the greetings to the right
@@ -64,7 +62,7 @@
 
             lastPos = curPos;
 
-            console.log("curpos: " + curPos + "    " + "skillPos: " + skillPos);
+            // console.log("curpos: " + curPos + "    " + "skillPos: " + skillPos);
 
             if (curPos > skillPos + 0.8*windowHeight) {
                 skillElements.map(function (cur) {
@@ -90,7 +88,6 @@
                 projectElements.map(function (cur) {
                     cur.style.display = "inline-block";
                     cur.classList.add("zoomIn", "animated");
-                    console.log($('.project-element').width());
                 });
             }
 

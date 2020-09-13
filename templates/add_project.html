@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Post</title>
+    <script src="https://cdn.tiny.cloud/1/zhiiac4zhc2wud0vfuvogccmkabtk9bo1ypi978ghmefgz9l/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <link rel="icon" href="../static/images/main-logo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/sidebarStyle.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css?v=1.1">
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="ending">
+        <div class="contact">
+
+            <form class="contact-form" method="POST">
+
+                <div class="form-group">
+                    {{ form.title(class="form-control", placeholder="Title...") }}
+                    {{ form.image_link(class="form-control", placeholder="Image link...") }}
+                    {{ form.short_description(class="form-control", cols="30", rows="10", placeholder="Short description...") }}
+                    {{ form.content(class="form-control", placeholder="Content...", id="text_editor") }}
+                    <div style="width: 100%; height: 20px;"></div>
+                    {{ form.submit(class="form-control btn contact-button") }}
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+<script>
+    tinymce.init({
+      selector: 'textarea#text_editor',
+      plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+      toolbar_mode: 'floating',
+      setup: function (editor) {
+        editor.on('change', function () {
+            editor.save();
+        });
+        }
+    });
+  </script>
+
+</body>
+</html>

@@ -26,14 +26,13 @@
     <link rel="stylesheet" href="../static/css/animate.css">
     <link rel="stylesheet" type="text/css" href="../static/css/sidebarStyle.css">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css?v=1.1">
-    <script src="../static/js/jquery-3.4.1.min.js"></script>
-    <base target="_blank">
+
 </head>
 
 <body>
 
         <div class="mobile-nav">
-                    <a href="{{ url_for("index", _scheme="https", _external=True) }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
+                    <a href="{{ url_for("page.index", _scheme="https", _external=True) }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
                     <span id="mobile-toggle"><span class="fas fa-bars"></span></span>
 
             <nav id="sidebar">
@@ -58,7 +57,7 @@
         <div id="page-content">
             <div class="main-background">
                 <div class="logo-container">
-                    <a href="{{ url_for("index") }}"><img src="../static/images/main-logo.png" class="main-logo"></a>
+                    <a href="{{ url_for("page.index") }}"><img src="../static/images/main-logo.png" class="main-logo"></a>
                 </div>
 
                 <div class="linkedin-container" target="_blank">
@@ -175,8 +174,34 @@
                         These are some of my personal projects. I have done a lot of projects, but most are small and only serve for the purpose of experimenting.
                     </p>
 
+                    <div class="project-line">
+                        {% for i in range(num_projects) %}
+
+                            {% if i == (num_projects-1) and num_projects%2 != 0 %}
+                                <div class="project-element pj-left pj-full" style="background-image: url({{ projects[i].image_link }})">
+                            {% else %}
+                                {% if i%2 == 0%}
+                                <div class="project-element pj-right pj-half" style="background-image: url({{ projects[i].image_link }})">
+                                {% else %}
+                                <div class="project-element pj-left pj-half" style="background-image: url({{ projects[i].image_link }})">
+                                {% endif %}
+                            {% endif %}
+                                    <div class="overlay">
+                                        <a href="{{ url_for('page.project', id=projects[i].id) }}"> <h3 class="project-element-title"> {{ projects[i].title }} </h3> </a>
+                                        <div class="project-element-description"> &nbsp;
+                                            {{ projects[i].short_description }}
+                                        </div>
+                                    </div>
+                                </div>
+                        {%  endfor %}
+
+                    </div>
+
+
+                    <!--
+
                         <div class="project-line">
-                            <div class="project-element" style="background-image: url('../static/images/resume-project.PNG')">
+                            <div class="project-element pj-left pj-half" style="background-image: url('../static/images/resume-project.PNG')">
                                     <div class="overlay">
                                         <h3 class="project-element-title"> This website </h3>
                                         <p class="project-element-description"> &nbsp;
@@ -186,9 +211,9 @@
                                     </div>
                                 </div>
 
-                                <div class="project-element" style="background-image: url('../static/images/hexapod.jpg');">
+                                <div class="project-element pj-right pj-half" style="background-image: url('../static/images/hexapod.jpg');">
                                     <div class="overlay">
-                                        <h3 class="project-element-title"> Hexapod Spidy </h3>
+                                        <a href=""> <h3 class="project-element-title"> Hexapod Spidy </h3> </a>
                                         <p class="project-element-description">
                                             &nbsp; A 18DOF, 3D printed hexapod whose controller
                                             unit is RaspberryPi 3. It is controlled via bluetooth by an Android app
@@ -196,10 +221,8 @@
                                         </p>
                                     </div>
                                 </div>
-                        </div>
 
-                        <div class="project-line" id="project-anchor">
-                                <div class="project-element" style="background-image: url('../static/images/nobugplease1.PNG')">
+                                <div class="project-element pj-full"  style="background-image: url('../static/images/nobugplease1.PNG')">
                                     <div class="overlay">
                                         <h3 class="project-element-title"> Forum Nobugplease </h3>
                                         <p class="project-element-description">
@@ -209,6 +232,11 @@
                                         </p>
                                     </div>
                                 </div>
+                        </div>
+
+                        <div class="project-line">
+
+
 
                                 <div class="project-element" style="background-image: url('../static/images/ledfan.jpg')">
                                     <div class="overlay">
@@ -220,7 +248,9 @@
                                         </p>
                                     </div>
                                 </div>
+
                             </div>
+                            -->
                         </div>
             </div>
 
@@ -292,7 +322,7 @@
                         <div class="form-group">
                             {{ form.name(class="form-control", placeholder="Name...") }}
                             {{ form.email(class="form-control", placeholder="Email...") }}
-                            {{ form.message(class="form-control", cols="30", rows="10", placeholder="Message...") }}
+                            {{ form.message(class="form-control no-resize", cols="30", rows="10", placeholder="Message...") }}
                             <div style="width: 100%; height: 20px;"></div>
                             {{ form.submit(class="form-control btn contact-button") }}
                         </div>
@@ -316,6 +346,7 @@
         <a href="https://www.linkedin.com/in/hoangha98/" target="_blank"><span class="fab fa-linkedin"></span></a>
     </p>
     <span class="far fa-copyright"></span> Hoang Ha 2019.
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../static/js/script.js"></script>
 </footer>
 

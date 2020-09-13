@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147333030-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-147333030-1');
+    </script>
+
+
+    <title> Hoang Ha </title>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <link rel="icon" href="../static/images/main-logo.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/sidebarStyle.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css?v=1.1">
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+
+        <div class="mobile-nav">
+                    <a href="{{ url_for("page.index", _scheme="https", _external=True) }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
+                    <span id="mobile-toggle"><span class="fas fa-bars"></span></span>
+
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Hoang Ha</h3>
+                </div>
+
+                <ul class="list-unstyled components" id="mobile-nav-bar">
+
+                    <li> <a class="anchor-link about-me-section-anchor"> About me </a> </li>
+                    <li> <a class="anchor-link skills-anchor"> Skills </a> </li>
+                    <li> <a class="anchor-link projects-anchor"> Projects </a> </li>
+                    <li> <a class="anchor-link experience-section-anchor"> Experience </a> </li>
+                    <li> <a href={{ resume_link }} target="_blank"> Resume </a> </li>
+                    <li> <a class="anchor-link contact-anchor-anchor"> Contact </a> </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+            <div class="project-background" style="background-image: url('{{ project.image_link }}')">
+                <div class="logo-container">
+                    <a href="{{ url_for("page.index") }}"><img src="../static/images/main-logo.png" class="main-logo"></a>
+                </div>
+
+                <div class="nav-bar" id="window-nav-bar">
+                    <ul id="nav-bar-options">
+                        <li class="anchor-link skills-anchor"> <a> skills </a> </li>
+                        <li class="anchor-link projects-anchor"> <a> projects </a> </li>
+                        <li class="anchor-link experience-section-anchor"> <a> experience </a> </li>
+                        <li> <a href={{ resume_link }} target="_blank"> resume </a> </li>
+                        <li class="anchor-link contact-anchor-anchor"> <a> contact </a> </li>
+                    </ul>
+                </div>
+
+                <div class="project-header">
+                    <h1> {{ project.title }} </h1>
+                </div>
+
+
+            </div>
+
+           <div class="project-details-container">
+               <div class="project-details">
+                   {{ project.content }}
+               </div>
+           </div>
+
+            <div class="ending">
+                <div class="contact">
+                    <h1 class="contact-title" id="contact-anchor"> Contact Me </h1>
+                    <p class="contact-line"> For any further inquiry, please leave me a message :) </p>
+
+
+                    <form class="contact-form" method="POST">
+
+                        <div class="form-group">
+                            {{ form.name(class="form-control", placeholder="Name...") }}
+                            {{ form.email(class="form-control", placeholder="Email...") }}
+                            {{ form.message(class="form-control", cols="30", rows="10", placeholder="Message...") }}
+                            <div style="width: 100%; height: 20px;"></div>
+                            {{ form.submit(class="form-control btn contact-button") }}
+                        </div>
+
+                        <p> ...Or you can send me a direct email to <a href="mailto:hoanghm4@gmail.com">hoanghm4@gmail.com</a></p>
+
+                    </form>
+
+                </div>
+            </div>
+
+
+
+</body>
+
+<footer>
+    <p class="medias">
+        <a href="https://www.facebook.com/minh.hoang.7505" target="_blank"><span class="fab fa-facebook-square"></span></a>
+        <a href="https://github.com/hoanghm" target="_blank"><span class="fab fa-github-square"></span></a>
+        <a href="https://www.linkedin.com/in/hoangha98/" target="_blank"><span class="fab fa-linkedin"></span></a>
+    </p>
+    <span class="far fa-copyright"></span> Hoang Ha 2019.
+    <script type="text/javascript" src="../static/js/script.js"></script>
+</footer>
+
+</html>

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c29900-82bd-4275-a880-b2266b5ae1dd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,6 +37,8 @@
       <list>
         <option value="Flask Main" />
         <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,6 +48,7 @@
   <component name="ProjectId" id="1cSDGuMRFiGpK0sdKYgc9nvqjL5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="E:/Web Developing/hoangresume" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -54,6 +61,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hoang\hoangresume\main" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -102,7 +114,19 @@
       <workItem from="1590859018598" duration="10514000" />
       <workItem from="1595699226815" duration="25000" />
       <workItem from="1595720669314" duration="6023000" />
-      <workItem from="1595778844559" duration="40000" />
+      <workItem from="1595778844559" duration="441000" />
+      <workItem from="1599356838971" duration="3244000" />
+      <workItem from="1599513119310" duration="1391000" />
+      <workItem from="1599541863385" duration="739000" />
+      <workItem from="1599589782561" duration="3057000" />
+      <workItem from="1599594237245" duration="58000" />
+      <workItem from="1599594312926" duration="8000" />
+      <workItem from="1599594582378" duration="1332000" />
+      <workItem from="1599677646029" duration="6086000" />
+      <workItem from="1599757392656" duration="9412000" />
+      <workItem from="1599792705537" duration="5626000" />
+      <workItem from="1599970387600" duration="8593000" />
+      <workItem from="1600017416981" duration="2295000" />
     </task>
     <servers />
   </component>
