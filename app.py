@@ -57,8 +57,7 @@ app.register_blueprint(page_blueprint)
 
 
 if __name__ == '__main__':
-    with app.app_context():
-        # db.create_all()
-        Role.insert_roles()
-        User.insert_admin()
+    db.create_all()
+    Role.insert_roles()
+    User.insert_admin()
     app.run()
