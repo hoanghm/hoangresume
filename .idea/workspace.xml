@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0c29900-82bd-4275-a880-b2266b5ae1dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/versions/273c7d2bbe63_initial_migration.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/273c7d2bbe63_initial_migration.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1599970387600" duration="8593000" />
       <workItem from="1600017416981" duration="2295000" />
       <workItem from="1600033942028" duration="3440000" />
-      <workItem from="1601005233265" duration="4902000" />
+      <workItem from="1601005233265" duration="5170000" />
     </task>
     <servers />
   </component>

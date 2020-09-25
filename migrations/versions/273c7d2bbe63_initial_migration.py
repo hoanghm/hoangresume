@@ -19,14 +19,14 @@ depends_on = None
 def upgrade():
     op.create_table('roles',
                     sa.Column('id', sa.INTEGER(), nullable=False),
-                    sa.Column('name', sa.VARCHAR(length=64), nullable=True),
+                    sa.Column('name', sa.VARCHAR(length=1024), nullable=True),
                     sa.Column('permission', sa.INTEGER(), nullable=True),
                     sa.PrimaryKeyConstraint('id'),
                     sa.UniqueConstraint('name')
                     )
     op.create_table('users',
                     sa.Column('id', sa.INTEGER(), nullable=False),
-                    sa.Column('username', sa.VARCHAR(length=64), nullable=True),
+                    sa.Column('username', sa.VARCHAR(length=1024), nullable=True),
                     sa.Column('role_id', sa.INTEGER(), nullable=True),
                     sa.Column('password_hash', sa.VARCHAR(length=2048), nullable=True),
                     sa.ForeignKeyConstraint(['role_id'], ['roles.id'], ),
@@ -34,8 +34,8 @@ def upgrade():
                     )
     op.create_table('projects',
                     sa.Column('id', sa.INTEGER(), nullable=False),
-                    sa.Column('title', sa.VARCHAR(length=512), nullable=True),
-                    sa.Column('image_link', sa.VARCHAR(length=1024), nullable=True),
+                    sa.Column('title', sa.VARCHAR(length=1024), nullable=True),
+                    sa.Column('image_link', sa.VARCHAR(length=2048), nullable=True),
                     sa.Column('short_description', sa.TEXT(), nullable=True),
                     sa.Column('content', sa.TEXT(), nullable=True),
                     sa.PrimaryKeyConstraint('id')
