@@ -28,7 +28,7 @@ def upgrade():
                     sa.Column('id', sa.INTEGER(), nullable=False),
                     sa.Column('username', sa.VARCHAR(length=64), nullable=True),
                     sa.Column('role_id', sa.INTEGER(), nullable=True),
-                    sa.Column('password_hash', sa.VARCHAR(length=64), nullable=True),
+                    sa.Column('password_hash', sa.VARCHAR(length=2048), nullable=True),
                     sa.ForeignKeyConstraint(['role_id'], ['roles.id'], ),
                     sa.PrimaryKeyConstraint('id')
                     )
