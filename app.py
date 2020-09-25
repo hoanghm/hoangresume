@@ -11,8 +11,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get("SECRET_KEY")
     # SECRET_KEY = 'default'
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
@@ -58,7 +58,7 @@ app.register_blueprint(page_blueprint)
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()
+        # db.create_all()
         Role.insert_roles()
         User.insert_admin()
     app.run()
