@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0c29900-82bd-4275-a880-b2266b5ae1dd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/data.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +82,9 @@
       <option name="targetType" value="PATH" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="SECRET_KEY " value="asecretkey" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -123,6 +127,7 @@
       <workItem from="1599970387600" duration="8593000" />
       <workItem from="1600017416981" duration="2295000" />
       <workItem from="1600033942028" duration="3440000" />
+      <workItem from="1601005233265" duration="1036000" />
     </task>
     <servers />
   </component>
