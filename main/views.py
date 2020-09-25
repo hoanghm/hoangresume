@@ -30,7 +30,7 @@ def index():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
-        return redirect(url_for("form_submitted"))
+        return redirect(url_for("page.form_submitted"))
     return render_template('index.html', form=form, projects=projects, num_projects=num_projects, resume_link=app.config["RESUME_LINK"], submitted=False)
 
 @page.route('/submitted', methods=['GET', 'POST'])
@@ -41,7 +41,7 @@ def form_submitted():
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
-        return redirect(url_for("form_submitted"))
+        return redirect(url_for("page.form_submitted"))
     return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=True)
 
 @page.route('/projects/<id>', methods=['GET', 'POST'])
