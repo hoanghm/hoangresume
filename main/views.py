@@ -36,13 +36,15 @@ def index():
 @page.route('/submitted', methods=['GET', 'POST'])
 def form_submitted():
     form = ContactForm()
+    projects = Project.query.all()
+    num_projects = len(projects)
     if request.method == "POST":
         name = request.form['name']
         email = request.form['email']
         message = request.form['message']
         send_email("hoanghm4@gmail.com", name, message + " " + email)
         return redirect(url_for("page.form_submitted"))
-    return render_template('index.html', form=form, resume_link=app.config["RESUME_LINK"], submitted=True)
+    return render_template('index.html', form=form, projects=projects, num_projects=num_projects, resume_link=app.config["RESUME_LINK"], submitted=True)
 
 @page.route('/projects/<id>', methods=['GET', 'POST'])
 def project(id):
