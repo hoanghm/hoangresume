@@ -642,7 +642,7 @@ html {
     background-position: center;
     margin-bottom: 0;
     z-index: 0;
-    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
 }
 
 .project-details-container {
@@ -656,9 +656,12 @@ html {
     display: inline-block;
     width: 80%;
     background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .project-header {
     color: white;
     font-size: 20px;
+    text-decoration: underline;
 }
