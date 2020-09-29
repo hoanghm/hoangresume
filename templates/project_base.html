@@ -33,53 +33,25 @@
 <body>
 
         <div class="mobile-nav">
-                    <a href="{{ url_for("page.index", _scheme="https", _external=True) }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
-                    <span id="mobile-toggle"><span class="fas fa-bars"></span></span>
-
-            <nav id="sidebar">
-                <div class="sidebar-header">
-                    <h3>Hoang Ha</h3>
-                </div>
-
-                <ul class="list-unstyled components" id="mobile-nav-bar">
-
-                    <li> <a class="anchor-link about-me-section-anchor"> About me </a> </li>
-                    <li> <a class="anchor-link skills-anchor"> Skills </a> </li>
-                    <li> <a class="anchor-link projects-anchor"> Projects </a> </li>
-                    <li> <a class="anchor-link experience-section-anchor"> Experience </a> </li>
-                    <li> <a href={{ resume_link }} target="_blank"> Resume </a> </li>
-                    <li> <a class="anchor-link contact-anchor-anchor"> Contact </a> </li>
-
-                </ul>
-            </nav>
-
+                    <a href="{{ url_for("page.index") }}" class="mobile-logo"><img src="../static/images/main-logo.png" class="mobile-logo"></a>
         </div>
+
 
             <div class="project-background" style="background-image: url('{{ project.image_link }}')">
                 <div class="logo-container">
                     <a href="{{ url_for("page.index") }}"><img src="../static/images/main-logo.png" class="main-logo"></a>
                 </div>
 
-                <div class="nav-bar" id="window-nav-bar">
-                    <ul id="nav-bar-options">
-                        <li class="anchor-link skills-anchor"> <a> skills </a> </li>
-                        <li class="anchor-link projects-anchor"> <a> projects </a> </li>
-                        <li class="anchor-link experience-section-anchor"> <a> experience </a> </li>
-                        <li> <a href={{ resume_link }} target="_blank"> resume </a> </li>
-                        <li class="anchor-link contact-anchor-anchor"> <a> contact </a> </li>
-                    </ul>
-                </div>
 
                 <div class="project-header">
                     <h1> {{ project.title }} </h1>
                 </div>
 
-
             </div>
 
            <div class="project-details-container">
                <div class="project-details">
-                   {{ project.content }}
+                   {{ project.content | safe }}
                </div>
            </div>
 

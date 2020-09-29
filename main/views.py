@@ -79,11 +79,12 @@ def add_project():
 def edit_project(id):
     form = AddProjectForm()
     project = Project.query.get_or_404(id)
-    if form.validate_on_submit():
+    if request.method == "POST":
         project.title = form.title.data
         project.image_link = form.image_link.data
         project.short_description = form.short_description.data
         project.content = form.content.data
+        db.session.commit()
         return redirect(url_for('page.project', id=id))
     else:
         form.title.data = project.title

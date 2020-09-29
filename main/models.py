@@ -8,7 +8,7 @@ class Project(db.Model):
     __tablename__ = 'projects'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(512))
-    image_link = db.Column(db.String(1024))
+    image_link = db.Column(db.String(2048))
     short_description = db.Column(db.Text)
     content = db.Column(db.Text)
 
